@@ -1,10 +1,9 @@
 
 function y = my_echo(x,d,a)
-delay = zeros(d*100,1);
-y = vertcat(delay,x(length(delay)+1,end));
+mydelay = zeros(1,floor(d*100));
+size(x)
+y = horzcat(mydelay,x(1:length(x)-length(mydelay)));
 y = y*a;
- if y == zeros(length(y,1))
-     y = y;
- else
-     y = my_echo(y,d,a);
+y=(y+x)';
+
 end
