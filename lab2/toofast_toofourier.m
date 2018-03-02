@@ -16,6 +16,7 @@ f = -Fs/2:Fs/(N-1):Fs/2;
 figure()
 subplot(2, 1, 1),
 plot(f/1000, abs(X), 'LineWidth', 1.5)
+xlim([-1 1])
 title('Magnitude Spectrum of x(t)', 'FontSize', 16)
 xlabel('f (kHz)', 'FontSize', 14)
 ylabel('|X(\Omega)|', 'FontSize', 14)
@@ -23,6 +24,7 @@ grid
 
 subplot(2, 1, 2),
 plot(f/1000, angle(X), 'LineWidth', 1.5)
+xlim([-1 1])
 title('Phase Spectrum of x(t)', 'FontSize', 16)
 xlabel('f (kHz)', 'FontSize', 14)
 ylabel('\angle X(\Omega)', 'FontSize', 14)
